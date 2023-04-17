@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import ValidationErrors from '@/components/ValidationErrors';
+import ValidationErrors from '@/shared/ValidationErrors.vue';
 import { mapState } from 'vuex';
 
 export default {

@@ -4,7 +4,7 @@
     <div class='container page'>
       <div class='row'>
         <div class='col-md-9'>
-          <feed-toggle />
+          <feed-toggle :tag-name='tagName' />
           <base-feed :apiUrl='apiUrl' />
         </div>
 
@@ -23,16 +23,14 @@ import BannerComponent from '@/shared/BannerComponent.vue';
 import FeedToggle from '@/shared/FeedToggle.vue';
 
 export default {
-  name: 'GlobalFeed',
-  components: {
-    FeedToggle,
-    BannerComponent,
-    PopularTags,
-    BaseFeed
-  },
-  data() {
-    return {
-      apiUrl: '/articles'
+  name: 'YourFeed',
+  components: { BannerComponent, PopularTags, BaseFeed, FeedToggle },
+  computed: {
+    tagName() {
+      return this.$route.params.slug;
+    },
+    apiUrl() {
+      return `/articles?tag=${this.tagName}`;
     }
   }
 };

@@ -1,6 +1,7 @@
 <template>
   <div class='home-page'>
     <banner-component />
+
     <div class='container page'>
       <div class='row'>
         <div class='col-md-9'>
@@ -23,17 +24,12 @@ import BannerComponent from '@/shared/BannerComponent.vue';
 import FeedToggle from '@/shared/FeedToggle.vue';
 
 export default {
-  name: 'GlobalFeed',
-  components: {
-    FeedToggle,
-    BannerComponent,
-    PopularTags,
-    BaseFeed
-  },
+  name: 'YourFeed',
+  components: { BannerComponent, PopularTags, BaseFeed, FeedToggle },
   data() {
     return {
-      apiUrl: '/articles'
-    }
-  }
+      apiUrl: '/articles/feed'
+    };
+  },
 };
 </script>

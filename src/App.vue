@@ -5,7 +5,7 @@
   </div>
 </template>
 <script>
-import ToolbarComponent from '@/components/ToolbarComponent.vue';
+import ToolbarComponent from '@/shared/ToolbarComponent.vue';
 
 export default {
   name: 'App',

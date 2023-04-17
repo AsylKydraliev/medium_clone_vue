@@ -47,11 +47,11 @@
 
 <script>
 import { mapState } from 'vuex';
-import BasePagination from '@/components/BasePagination.vue';
+import BasePagination from '@/shared/BasePagination.vue';
 import { stringify, parseUrl } from 'query-string';
 import { limit } from '@/helpers/vars';
-import LoadingComponent from '@/components/LoadingComponent.vue';
-import ErrorComponent from '@/components/ErrorComponent.vue';
+import LoadingComponent from '@/shared/LoadingComponent.vue';
+import ErrorComponent from '@/shared/ErrorComponent.vue';
 
 export default {
   name: 'BaseFeed',

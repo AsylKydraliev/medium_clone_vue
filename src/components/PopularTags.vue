@@ -8,13 +8,14 @@
     <div v-if='tags' class='sidebar'>
       <h6>Popular tags</h6>
       <div class='tag-list'>
-        <a
+        <router-link
           v-for='tag in tags'
           :key='tag'
           class='tag-default tag-pill'
+          :to="{name: 'tag', params: {slug: tag}}"
         >
           {{ tag }}
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -22,8 +23,8 @@
 
 <script>
 import { mapState } from 'vuex';
-import LoadingComponent from '@/components/LoadingComponent.vue';
-import ErrorComponent from '@/components/ErrorComponent.vue';
+import LoadingComponent from '@/shared/LoadingComponent.vue';
+import ErrorComponent from '@/shared/ErrorComponent.vue';
 
 export default {
   name: 'PopularTags',
